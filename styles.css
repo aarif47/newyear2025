@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #282c34;
+    color: white;
+    overflow: hidden;
+    animation: bgChange 10s infinite alternate;
+}
+
+@keyframes bgChange {
+    0% { background-color: #282c34; }
+    25% { background-color: #4e8cf5; }
+    50% { background-color: #f54e4e; }
+    75% { background-color: #f9a825; }
+    100% { background-color: #4caf50; }
+}
+
+.container {
+    text-align: center;
+}
+
+.new-year-message {
+    font-size: 3rem;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+.name-input {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid #f9a825;
+}
+
+.greet-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #f9a825;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.greet-button:hover {
+    transform: scale(1.1);
+    background-color: #f9c825;
+}
+
+.emoji-container {
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+.surprise {
+    position: absolute;
+    bottom: 0;
+    animation: floatUp 4s forwards, moveSide 6s forwards;
+    opacity: 1;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+
+@keyframes moveSide {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(50vw);
+    }
+    100% {
+        transform: translateX(-50vw);
+    }
+}
+
+.balloon {
+    width: 30px;
+    height: 50px;
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+    background-color: #f0a500;
+}
+
+.cake {
+    width: 40px;
+    height: 40px;
+    background-image: url('https://img.icons8.com/ios/50/000000/birthday-cake.png'); /* Add a cake image */
+    background-size: cover;
+    position: absolute;
+}
+
+.bird {
+    width: 50px;
+    height: 50px;
+    background-image: url('https://img.icons8.com/ios/50/000000/bird.png'); /* Add a bird image */
+    background-size: cover;
+    position: absolute;
+}
+
